@@ -1,5 +1,7 @@
-var mongoose = require('mongoose');
-mongoose.connect(MONGODB_ROOT);
+const mongoose = require('mongoose');
+const Promise = require('bluebird');
+mongoose.Promise = Promise
+mongoose.connect(process.env.MONGODB_ROOT);
 
-var mongodb = mongoose.connection;
+const mongodb = mongoose.connection;
 module.exports = mongodb;

@@ -4,6 +4,8 @@ const app = express();
 
 const routes = require('./routes')
 
+require('./db/mongodb')
+
 for (var prop in routes) {
   app.use('/v1/' + prop , routes[prop])
 }
