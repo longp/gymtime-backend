@@ -1,9 +1,9 @@
-var mongoose = require 'mongoose'
-var Schema = mongoose.Schema
-var bcrypt = require 'bcrypt'
-var SALT_WORK_FACTOR = 10
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema
+const bcrypt = require('bcrypt');
+const SALT_WORK_FACTOR = 10
 
-var UserSchema = new Schema({
+const UserSchema = new Schema({
   userName: {
     type: String,
     required: true
